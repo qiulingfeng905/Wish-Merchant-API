@@ -34,7 +34,7 @@ $client = new WishClient($key,'sandbox');
 //$client->fulfillOrder($one_order);
 
 //Get an array of all changed orders since January 20, 2010
-$changed_orders = $client->getAllChangedOrdersSince('2010-01-20');
+$changed_orders = $client->getAllChangedOrdersSince();
 print(count($changed_orders)." changed orders.\n");
 
 //Get an array of all unfufilled orders since January 20, 2010

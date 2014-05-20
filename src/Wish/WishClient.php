@@ -202,8 +202,11 @@ class WishClient{
     return new WishOrder($response->getData());
   }
 
-  public function getAllChangedOrdersSince($time){
-    $params = array('since'=>$time);
+  public function getAllChangedOrdersSince($time=null){
+    $params = array();
+    if($time){
+      $params['since']=$time;
+    }
     return $this->getResponseIter(
       'GET',
       'order/multi-get',
@@ -211,8 +214,11 @@ class WishClient{
       $params);
   }
 
-  public function getAllUnfulfilledOrdersSince($time){
-    $params = array('since'=>$time);
+  public function getAllUnfulfilledOrdersSince($time=null){
+    $params = array();
+    if($time){
+      $params['since']=$time;
+    }
     return $this->getResponseIter(
       'GET',
       'order/get-fulfill',
