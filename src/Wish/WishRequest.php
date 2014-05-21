@@ -33,6 +33,7 @@ class WishRequest{
     $this->method = $method;
     $this->path = $path;
     $params["key"] = $session->getAPIKey();
+    if($session->getMerchantId())$params['merchant_id']=$session->merchant_id;
     $this->params = $params;
   }
 

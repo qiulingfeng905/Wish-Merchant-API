@@ -24,9 +24,11 @@ class WishSession{
   const SESSION_STAGE = 3;
   private static $api_key;
   private static $session_type;
+  private static $merchant_id;
 
-  public function __construct($api_key,$session_type){
+  public function __construct($api_key,$session_type,$merchant_id=null){
     $this->api_key = $api_key;
+    $this->merchant_id = $merchant_id;
     switch($session_type){
       case 'sandbox':
         $this->session_type = static::SESSION_SANDBOX;break;
@@ -44,6 +46,9 @@ class WishSession{
   }
   public function getSessionType(){
     return $this->session_type;
+  }
+  public function getMerchantId(){
+    return $this->merchant_id;
   }
 
 

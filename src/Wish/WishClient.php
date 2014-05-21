@@ -34,9 +34,9 @@ class WishClient{
 
   const LIMIT = 50;
 
-  public function __construct($api_key,$session_type='prod'){
+  public function __construct($api_key,$session_type='prod',$merchant_id=null){
 
-    $this->session = new WishSession($api_key,$session_type);
+    $this->session = new WishSession($api_key,$session_type,$merchant_id);
 
   }
 
