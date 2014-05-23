@@ -1,6 +1,6 @@
 # Wish SDK for PHP
 
-## Documantation
+## Documentation
 
 http://merchant.wish.com/documentation/api
 
@@ -18,7 +18,7 @@ Add wish/wish-sdk-php as a dependect in your project's composer.json
 {
   "minimum-stability": "dev",
   "require":{
-      "wish/php-sdk":"1.*"
+      "wish/php-sdk":"*"
   }
 }
 ````
