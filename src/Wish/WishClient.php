@@ -71,7 +71,7 @@ class WishClient{
   public function getResponseIter($method,$uri,$getClass,$params=array()){
     $start = 0;
     $params['limit'] = static::LIMIT;
-    $class_arr = [];
+    $class_arr = array();
     do{
       $params['start']=$start;
       $response = $this->getResponse($method,$uri,$params);
@@ -84,7 +84,7 @@ class WishClient{
   }
 
   public function authTest(){
-    $response = getResponse('GET','auth_test');
+    $response = $this->getResponse('GET','auth_test');
     return "success";
 
   }
